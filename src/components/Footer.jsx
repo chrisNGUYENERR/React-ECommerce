@@ -1,9 +1,12 @@
 import { Email, Facebook, Instagram, Phone, Pinterest, Room, Twitter } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     display: flex;
+
+    ${mobile({ flexDirection: 'column' })}
 `;
 
 const Left = styled.div`
@@ -40,6 +43,8 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+
+    ${mobile({ display: 'none' })}
 `;
 
 const Title = styled.h3`
@@ -62,6 +67,8 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+
+    ${mobile({ backgroundColor: '#f5e6e6' })}
 `;
 
 const ContactItem = styled.div`
@@ -78,7 +85,7 @@ const Footer = () => {
   return (
     <Container>
         <Left>
-            <Logo>E-Commerce.</Logo>
+            <Logo>CHRIS.</Logo>
             <Desc>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta itaque et dignissimos similique magnam, quidem in nihil molestiae ex veniam? Laboriosam neque quaerat nam, autem id aliquid perspiciatis repudiandae mollitia. 
             </Desc>
