@@ -2,13 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { mobile } from '../responsive';
 
-const Container = styled.div`
-    flex: 1;
-    margin: 3px;
-    height: 70vh;
-    position: relative;
-`;
-
 const Image = styled.img`
     width: 100%;
     height: 100%;
@@ -16,6 +9,20 @@ const Image = styled.img`
 
     ${mobile({ height: '20vh' })}
 `;
+
+const Container = styled.div`
+    flex: 1;
+    margin: 3px;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+
+    &:hover ${Image}{
+        transform: scale(1.1);
+        transition: all ease 0.5s
+    }
+`;
+
 
 const Info = styled.div`
     position: absolute;
